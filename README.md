@@ -8,8 +8,8 @@ The main objectives:
 3. Apply style.
 4. To submit the form a submit butoon is clicked. OrangeBankID and CardNumber are required and should contain only alphanumeric characters. Show errors if not.
 
-Desktop Version:
+## Desktop Version:
 ![Image For Desktop](https://github.com/BaltacMihai/IngForm/blob/main/PhotosForGit/Laptop.PNG?raw=true)
 
-Mobile Version
+## Mobile Version
 ![Image For Phone](https://github.com/BaltacMihai/IngForm/blob/main/PhotosForGit/Phone.PNG?raw=true)
