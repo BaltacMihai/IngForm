@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange Bank login</title>
+
+</head>
+<body>
+    <div class="navbar">
+        <img src="logo.png" alt="logo" class="padding-5">
+        <a href="#" class="padding-5"> <- Back</a>
+    </div>
+    <div class="mid-section">
+        <form name="Login" action="simple.php" onsubmit="logginSucces()" method="post"> 
+            <!-- if the box for  save credentials is checked, I want to save the credentials on localStore and get them with .php file with the method="get" -->
+            <label for="OrangeBankId" >Orange Bank Id</label>
+            <input type="text" id="OrangeBankId" name="OrangeBankId" placeholder="RO 123" required pattern="[a-zA-Z0-9\s]+" >
+            <label for="CardNo">Card Number</label>
+            <input type="text" id="CardNo" name="CardNo" placeholder="XXXX XXXX XXXX XXXX"required pattern="[a-zA-Z0-9\s]+" >
+          <div class="Save">
+                 <label for="credentials">Do you want to save the credentials?</label>
+            <input type="checkbox" id="credentials" name="credentials" value="Yes">
+          </div>
+         
+            <input type="submit" name="submit" id="login" value="Log In">
+        </form>
+    </div>
+    <div class="footer">
+        <p>This site is done as an Assignment for ING Tech</p>
+    </div>
+</body>
+
+<style>
+    html,body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+flex-direction: column;
+font-family:'Courier New', Courier, monospace;
+    font-weight: 50;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    padding-left: 5%;
+}
+a{
+    text-decoration: none;
+    font-weight: 100;
+    padding-left: 5%;
+    color:rgb(0, 0, 0);
+}
+.mid-section {
+background: #ff8d14;
+width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+ 
+  
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+
+input{
+    border:none;
+    border-radius: 10px;
+    padding:1em;
+
+}
+input[type="submit"]{
+    background-color: black;
+    color: white;
+    padding:1.2em;
+}
+input[type="submit"]:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s ;
+}
+
+input[type="submit"]:active{
+    box-shadow: 0 10px #00aa77;
+    transform: translate(5px);
+}
+#login{
+    margin: 1em;
+}
+
+.footer{
+    background-color: black;
+    color:white;
+    text-align: center;
+}
+
+
+</style>
+<script>
+function logginSucces() {
+
+   class Credentials
+   {
+    constructor(id,cardNo)
+    {
+        this.id=id;
+        this.cardNo=cardNo;
+    }
+    valdiateId(id)
+    {
+        if(id<0) return false;
+        this.id = id.replace(/\s+/g, '');
+    }
+    validateCardNo(CardNo)
+    {
+        if(CardNo<0) return false;
+        this.CardNo = CardNo.replace(/\s+/g, '');
+    }
+
+    show(){
+        if(valdiateId(this.id)&&validateCardNo(this.CardNo))
+        alert("Succes");
+    }
+
+   }
+   let local = new Credentials(document.forms["Login"]["OrangeBankId"].value,document.forms["Login"]["CardNo"].value)
+local.show();
+
+}
+</script>
+</html>
