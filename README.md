@@ -10,7 +10,7 @@ The main objectives:
 
 ### Mockup
 I made a mockup of the site in Vanilla Html,CSS and JavaScript, you can find it "Form" directory. I made a ".php" file which serve as an "API" to see that I can connect to a database using PHP method.
-For the "Save Credentials" I want to store them in the local Store of the Client device, but I know is a **bad** practice, so I will think on other methods.
+For the "Save Credentials" I want to store them in the local Store of the Client device, but I know is a **bad** practice, so I will think on another method.
 
 ## Desktop Version:
 ![Image For Desktop](https://github.com/BaltacMihai/IngForm/blob/main/PhotosForGit/Laptop.PNG?raw=true)
